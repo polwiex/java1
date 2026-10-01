@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+<meta charset="utf-8">
+<title>Zadanie 5 - Polina Kotliarevska</title>
+
+<script>
+
+function WinOpen_Kotliarevska_1()
+{
+var okno1 = window.open("", "grafika1", "width=200,height=300,left=10,top=80");
+
+okno1.document.write("<html>");
+okno1.document.write("<head><title>Grafika 1</title></head>");
+okno1.document.write("<body>");
+okno1.document.write("<p style='color:red;'>ja śmiejąca się z żartów nauczyciela, bo chcę zdać</p>");
+okno1.document.write("<img src='1.jpg' width='150' height='180'>");
+okno1.document.write("</body>");
+okno1.document.write("</html>");
+}
+
+
+function WinOpen_Kotliarevska_2()
+{
+var okno2 = window.open("", "grafika2", "width=200,height=300,left=500,top=80");
+
+okno2.document.write("<html>");
+okno2.document.write("<head><title>Grafika 2</title></head>");
+okno2.document.write("<body>");
+okno2.document.write("<p style='color:blue;'>Pan od wf,gdy dowiedział się, że mam zwolnienie z wf i basenu</p>");
+okno2.document.write("<img src='2.jpg' width='150' height='180'>");
+okno2.document.write("</body>");
+okno2.document.write("</html>");
+}
+
+
+function WinOpen_Kotliarevska_3()
+{
+var okno3 = window.open("", "grafika3", "width=200,height=300,left=10,top=450");
+
+okno3.document.write("<html>");
+okno3.document.write("<head><title>Grafika 3</title></head>");
+okno3.document.write("<body>");
+okno3.document.write("<p style='color:green;'>ME AND COCA-COLA</p>");
+okno3.document.write("<img src='3.jpg' width='150' height='180'>");
+okno3.document.write("</body>");
+okno3.document.write("</html>");
+}
+
+
+function WinOpen_Kotliarevska_4()
+{
+var okno4 = window.open("", "grafika4", "width=200,height=300,left=500,top=450");
+
+okno4.document.write("<html>");
+okno4.document.write("<head><title>Grafika 4</title></head>");
+okno4.document.write("<body>");
+okno4.document.write("<p style='color:purple;'>Ja na informatyce</p>");
+okno4.document.write("<img src='4.jpg' width='150' height='180'>");
+okno4.document.write("</body>");
+okno4.document.write("</html>");
+}
+
+
+function okno_zamknij_Kotliarevska_1()
+{
+window.close();
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2 style="color:red; text-align:center;">
+wykonała: Polina Kotliarevska<br>
+mój numer w dzienniku 10, czyli mam układ [(10) mod 4=2] układ 2
+</h2>
+
+<div style="text-align:center;">
+
+<input type="button"
+value="grafika1"
+onclick="WinOpen_Kotliarevska_1()">
+
+<input type="button"
+value="grafika2"
+onclick="WinOpen_Kotliarevska_2()">
+
+<input type="button"
+value="grafika3"
+onclick="WinOpen_Kotliarevska_3()">
+
+<input type="button"
+value="grafika4"
+onclick="WinOpen_Kotliarevska_4()">
+
+<br><br><br><br><br><br>
+
+<input type="button"
+value="zamknij okno"
+onclick="okno_zamknij_Kotliarevska_1()">
+
+</div>
+
+</body>
+
+</html>
