@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 20</title>
+<script>
+var xa_kot, ya_kot, xb_kot, yb_kot, xc_kot, yc_kot;
+finction wczytaj_kot(){
+xa_kot = parseFloat(document.getElementById("xa").value);
+ya_kot = parseFloat(document.getElementById("ya").value);
+xb_kot = parseFloat(document.getElementById("xb").value);
+yb_kot = parseFloat(document.getElementById("yb").value);
+xc_kot = parseFloat(document.getElementById("xc").value);
+yc_kot = parseFloat(document.getElementById("yc").value);
+
+}
+functiom AB_kot() {
+                    return Math.sqrt(Math.pow(xa_kot - xb_kot, 2) + Math.pow(ya_kot - yb_kot, 2));
+}
+functiom BC_kot() {
+                    return Math.sqrt(Math.pow(xb_kot - xc_kot, 2) + Math.pow(yb_kot - yc_kot, 2));
+}
+functiom AC_kot() {
+                    return Math.sqrt(Math.pow(xa_kot - xc_kot, 2) + Math.pow(ya_kot - yc_kot, 2));
+}
+function oblicz_kot(){
+wczytaj_kot();
+var wynik = document.getElementById("wynik");
+
+var pole2 =(xb_kot - xa_kot) * (yc_kot-ya_kot) - (xc_kot - xa_kot) * (yb_kot - ya_kot);
+if(pole2==0) {
+    wynik. innerHTML ="Punkty są współliniowe, podaj inne.";
+return;
+}
+wynik.innerHTML = "AB="+AB_kot()+ "<br>"+
+                  "BC="+BC_kot()+ "<br>"+
+                  "AC="+AC_kot();
+}
+</script>
+</head>
+<body>

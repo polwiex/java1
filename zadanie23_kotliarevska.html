@@ -1,0 +1,35 @@
+<html> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="styl.css"> 
+ </head> 
+<body> 
+ <script type="text/javascript">
+ function dlugoscDrabiny (d, x)
+{
+return Math.sqrt (d*d x*x);
+}
+function katNachylenia (d,x)
+{
+var radiany =Math.atan(d/x);
+return radiany *180 / Math.PI;
+}
+function 23 zadanie 23()
+{
+var d = parestFloat(document.getElementById("d").value);
+var x = paresetFloat(document.getElementById("x").value);
+
+
+document.getElementById("drabina").value = dlugoscDrabiny (d,x). toFixed(2);
+document.getElementById("alfa").value =katNachylenia (x,d).toFixed(2);
+}
+</script>
+ <fieldest style= "width;520px">
+ <legend> Obiczanie odległości od drabiny i kąta </legend>
+ <p>
+Podaj d= <input type="text" id="d" size="10" value="">
+Podaj x=<input type ="text" id="d" size="10" value="">
+</p>
+<p>input
+</p>
+return 0;
