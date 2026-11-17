@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>   
 <head>    
-<title> Użycie fukcji </title>    
+<title>Polinka Malinka</title>    
 <meta charset="utf-8">   
 </head>  
 <body> 
@@ -10,21 +11,28 @@ var a=parseFloat(prompt("a=",""));
 var b=parseFloat(prompt("b=","")); 
 function suma_kot(a, b) { 
 return a + b; 
-} 
-document.write("suma="+suma_kot(a,b)+"<br>"); 
+}
 function odejmowanie_kot(a, b) { 
 return a - b; 
 } 
-document.write("odejmowanie="+odejmowanie_kot(a,b)+"<br>");
-function mnożenie_kot(a, b) { 
+function mnozenie_kot(a, b) { 
 return a * b; 
-} 
-document.write("mnożenie="+mnożenie_kot(a,b)+"<br>");
-function od_kwadratu_kot(a, b) { 
-return a ^2 ; 
-} 
-document.write("od_kwadratu="+od_kwadratu_kot(a,b)+"<br>");
+}
+function kwadrat_kot1(a, b) { 
+return a * a;
+}
+function kwadrat_kot2(a, b) { 
+return b * b;
+}
+function reszta_kot(a, b) { 
+return a % b;
+}
+document.write("suma_kot("+a+","+b+")="+suma_kot(a,b)+"<br>");
+document.write("odejmowanie_kot("+a+","+b+")="+odejmowanie_kot(a,b)+"<br>");
+document.write("mnożenie_kot("+a+","+b+")="+mnozenie_kot(a,b)+"<br>");
+document.write("od_kwadratu_kot"+a+","+b+")<br>"+a+"^2 = "+kwadrat_kot1(a,b)+"<br>"+b+"^2 = "+kwadrat_kot2(a,b)+"<br>");
+document.write("reszta_z_dzielenia_a_przez_b_kot("+a+","+b+")="+reszta_kot(a,b)+"<br>");
 </script> 
 </div> 
 </body> 
-</html> 
+</html>
