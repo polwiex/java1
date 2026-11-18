@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Zadanie 20</title>
-<script>
-var xa_kot, ya_kot, xb_kot, yb_kot, xc_kot, yc_kot;
-finction wczytaj_kot(){
-xa_kot = parseFloat(document.getElementById("xa").value);
-ya_kot = parseFloat(document.getElementById("ya").value);
-xb_kot = parseFloat(document.getElementById("xb").value);
-yb_kot = parseFloat(document.getElementById("yb").value);
-xc_kot = parseFloat(document.getElementById("xc").value);
-yc_kot = parseFloat(document.getElementById("yc").value);
-
-}
-functiom AB_kot() {
-                    return Math.sqrt(Math.pow(xa_kot - xb_kot, 2) + Math.pow(ya_kot - yb_kot, 2));
-}
-functiom BC_kot() {
-                    return Math.sqrt(Math.pow(xb_kot - xc_kot, 2) + Math.pow(yb_kot - yc_kot, 2));
-}
-functiom AC_kot() {
-                    return Math.sqrt(Math.pow(xa_kot - xc_kot, 2) + Math.pow(ya_kot - yc_kot, 2));
-}
-function oblicz_kot(){
-wczytaj_kot();
-var wynik = document.getElementById("wynik");
-
-var pole2 =(xb_kot - xa_kot) * (yc_kot-ya_kot) - (xc_kot - xa_kot) * (yb_kot - ya_kot);
-if(pole2==0) {
-    wynik. innerHTML ="Punkty są współliniowe, podaj inne.";
-return;
-}
-wynik.innerHTML = "AB="+AB_kot()+ "<br>"+
-                  "BC="+BC_kot()+ "<br>"+
-                  "AC="+AC_kot();
-}
-</script>
+    <meta charset="UTF-8">
+    <title>Polina Kotliarevska</title>
+    <script>
+        function AB_kot() 
+	{
+var xa_kot = parseFloat(document.getElementById("xa_kot").value);
+var ya_kot = parseFloat(document.getElementById("ya_kot").value);
+var xb_kot = parseFloat(document.getElementById("xb_kot").value);
+var yb_kot = parseFloat(document.getElementById("yb_kot").value);
+var dx = xb_kot - xa_kot;
+var dy = yb_kot - ya_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+	function BC_kot() 
+	{
+var xb_kot = parseFloat(document.getElementById("xb_kot").value);
+var yb_kot = parseFloat(document.getElementById("yb_kot").value);
+var xc_kot = parseFloat(document.getElementById("xc_kot").value);
+var yc_kot = parseFloat(document.getElementById("yc_kot").value);
+var dx = xc_kot - xb_kot;
+var dy = yc_kot - yb_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+        function AC_kot() 
+	{
+var xa_kot = parseFloat(document.getElementById("xa_kot").value);
+var ya_kot = parseFloat(document.getElementById("ya_kot").value);
+var xc_kot = parseFloat(document.getElementById("xc_kot").value);
+var yc_kot = parseFloat(document.getElementById("yc_kot").value);
+var dx = xc_kot - xa_kot;
+var dy = yc_kot - ya_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+        function boki() 
+	{
+var bokAB = AB_kot();
+var bokBC = BC_kot();
+var bokAC = AC_kot();
+document.getElementById("wyniki").innerHTML = 
+"Długość boku AB: " + bokAB.toFixed(2) + "<br>" +
+"Długość boku BC: " + bokBC.toFixed(2) + "<br>" +
+"Długość boku AC: " + bokAC.toFixed(2);
+        }
+    </script>
 </head>
 <body>
+
+    <h1>Wszystko o TRÓJKĄCIE</h1>
+    <form>
+        <label>Punkt A (xa_kot, ya_kot):</label><br>
+        <input type="number" id="xa_kot" value="0"><br>
+	<input type="number" id="ya_kot" value="0"><br><br>
+
+        <label>Punkt B (xb_kot, yb_kot):</label><br>
+        <input type="number" id="xb_kot" value="0"><br>
+        <input type="number" id="yb_kot" value="0"><br><br>
+
+        <label>Punkt C (xc_kot, yc_kot):</label><br>
+        <input type="number" id="xc_kot" value="0"><br>
+        <input type="number" id="yc_kot" value="0"><br><br>
+
+        <button type="button" onclick="boki()">Oblicz boki</button>
+    </form>
+    <div  style="color:red;font-size:70px;"id="wyniki"></div>
+
+</body>
+</html> 
