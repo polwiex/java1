@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>kod Polina Kotliarevska</title>
+</head>
+<body>
+<h1>KOD</h1>
+<textarea rows="90" cols="34">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>polina kotliarevska</title>
+    <script>
+        function AB_kot() 
+	{
+var xa_kot = parseFloat(document.getElementById("xa_kot").value);
+var ya_kot = parseFloat(document.getElementById("ya_kot").value);
+var xb_kot = parseFloat(document.getElementById("xb_kot").value);
+var yb_kot = parseFloat(document.getElementById("yb_kot").value);
+var dx = xb_kot - xa_kot;
+var dy = yb_kot - ya_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+	function BC_kot() 
+	{
+var xb_kot = parseFloat(document.getElementById("xb_kot").value);
+var yb_kot = parseFloat(document.getElementById("yb_kot").value);
+var xc_kot = parseFloat(document.getElementById("xc_kot").value);
+var yc_kot = parseFloat(document.getElementById("yc_kot").value);
+var dx = xc_kot - xb_kot;
+var dy = yc_kot - yb_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+        function AC_kot() 
+	{
+var xa_kot = parseFloat(document.getElementById("xa_kot").value);
+var ya_kot = parseFloat(document.getElementById("ya_kot").value);
+var xc_kot = parseFloat(document.getElementById("xc_kot").value);
+var yc_kot = parseFloat(document.getElementById("yc_kot").value);
+var dx = xc_kot - xa_kot;
+var dy = yc_kot - ya_kot;
+return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+        }
+        function boki() 
+	{
+var bokAB = AB_kot();
+var bokBC = BC_kot();
+var bokAC = AC_kot();
+document.getElementById("wyniki").innerHTML = 
+"Długość boku AB: " + bokAB.toFixed(2) + "<br>" +
+"Długość boku BC: " + bokBC.toFixed(2) + "<br>" +
+"Długość boku AC: " + bokAC.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Wszystko o TRÓJKĄCIE</h1>
+    <form>
+        <label>Punkt A (xa_kot, ya_kot):</label><br>
+        <input type="number" id="xa_kot" value="0"><br>
+	<input type="number" id="ya_kot" value="0"><br><br>
+
+        <label>Punkt B (xb_kot, yb_kot):</label><br>
+        <input type="number" id="xb_kot" value="0"><br>
+        <input type="number" id="yb_kot" value="0"><br><br>
+
+        <label>Punkt C (xc_kot, yc_kot):</label><br>
+        <input type="number" id="xc_kot" value="0"><br>
+        <input type="number" id="yc_kot" value="0"><br><br>
+
+        <button type="button" onclick="boki()">Oblicz boki</button>
+    </form>
+    <div  style="color:red;font-size:70px;"id="wyniki"></div>
+
+</body>
+</html>
+</textarea>
+</body>
+</html
