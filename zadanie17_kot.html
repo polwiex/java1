@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Polina Kotliarevska</title>
+<script language="JavaScript">
+    document.write("<h1>1. Wymień cztery sposoby wyprowadzania danych w JS</h1><ul><li>z użyciem dokument.write()</li><li>z użyciem okienka alert()</li><li>do okienek formularza</li><li>do tabeli</li></ul>");
+
+document.write("<h1>2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</h1><b>Co to jest funkcja?</b><br><ul><li>Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy</li><li>Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod</li><li>Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane np. suma_kry(a, b)</li><li>Może(nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym <b>return</b>");
+
+document.write("<h1>3. Omów metody getElementsByName, getElementById, getElementByTagName (może być w postaci tabeli)</h1>");
+
+</script> 
+      </head> 
+<body>
+<table border="1" cellpaddng="10" cellspacing="0">
+</font>
+     </tr>
+     <tr>
+      <th>Metoda</th>
+      <th>Opis</th>
+     </tr>
+     <tr>
+      <td height="25" width="300">
+&nbsp;getElementById("id")
+      </td>
+      <td height="25" width="300">
+dostęp do wszystkich elementów o konkretnej
+wartości atrybutu id
+      </td>
+    </tr>
+    <tr>
+      <td height="25" width="300">
+&nbsp;getElementByTagName("znacznik ")
+      </td>
+      <td height="25" width="300">
+dostęp do wszystkich elementów o typie
+znacznika, np. P lub DIV
+      </td>
+    </tr>
+   <tr>
+      <td height="25" width="300">
+&nbsp;getElementByName("nazwa")
+      </td>
+      <td height="25" width="300">
+dostęp do wszystkich elementów o konkretnej
+wartości atrybutu
+      </td>
+    </tr>
+   </table>
+<script>
+document.write("<h1>4. Omów właściwości innerHTML innerText className. (każdą osobno)</h1><u><b>Właściwości tak pobranego elementu to:</b></u><br><ul><li><b>innerHTML</b> - jest to właściwość, która umożliwia odczyt, zmodyfikowanie, wstawienie, albo usunięcie kodu HTML z danego elementu HTML np. w tabeli</li><li><b>innerText</b> - umożliwia określenie ciągu znaków który zostanie umieszczony w elemencie</li><li><b>className</b> - umożliwia określenie klasy CSS użytej do prezentacji elementu</li></ul>");
+</script>
+
+<p>Przykład</p>
+<table border="1" cellpaddng="10" cellspacing="0">
+</font>
+     <tr>
+      <td height="300" width="500">
+&lt;!DOCTYPE html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt; Przykłady dostępu do elementów &lt;/title&gt;<br>
+&lt;meta charset="utf-8"&gt;<br>
+&lt;style type="text/css"&gt;<br>
+.wyroznienieCzerwone &lbrace; color: Red; font-weight: 600; &rbrace;<br>
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;div id="nazwa"&gt;&lt;/div&gt;<br>
+&lt;script&gt;<br>
+document.getElementById("nazwa").innerHTML = "Witaj";<br>
+document.getElementById("nazwa").className = "wyroznienieCzerwone";<br>
+&lt;/script&gt;<br>
+&lt;/body&gt;
+      </td>
+    </tr>
+</body>
+</html>
