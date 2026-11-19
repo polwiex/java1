@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>kod Polina Kotliarevska</title>
+</head>
+<body>
+<h1>KOD</h1>
+<textarea rows="90" cols="34">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Polina Kotliarevska</title>
+</head>
+<body>
+<script type="text/javascript">
+    function drabina1(d, x) 
+    {
+        return Math.sqrt(d * d + x * x);
+    }
+    function alfa(d, x) {
+        var radian = Math.atan(d / x);
+        var stopien = radian * (180 / Math.PI);
+        return stopien;
+    }
+
+    function wynik() {
+        var d = parseFloat(document.getElementById('d').value);
+        var x = parseFloat(document.getElementById('x').value);
+        
+        var drabina = drabina1(d, x);
+        var kat = alfa(d, x);
+        
+        document.getElementById('wynik_drabina').value = drabina.toFixed(2);
+        document.getElementById('wynik_alfa').value = kat.toFixed(2);
+    }
+</script>
+
+<h1>Pobliczanie odległości od drabiny i kąta</h1>
+<br>
+Podaj d= <input type="text" id="d" value="">
+Podaj x= <input type="text" id="x" value="">
+<br><br>
+<input type="button" name="oblicz" value="oblicz" onclick="wynik()"><br><br>
+Drabina= <input type="text" id="wynik_drabina" value="">
+Alfa= <input type="text" id="wynik_alfa" value="">
+
+</body>
+</html>
+</textarea>
